@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset and Global Styles */
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-font-Inter: "Inter", sans-serif;
+  --primary-color: #007bff;
+  --secondary-color: #f9f9f9;
+  --text-color: black;
+  --bg-color: #dae3e4;
+
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+/* Full Page Setup */
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Links */
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+/* Typography */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+/* Buttons */
+button {
+  border-radius: 8px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* ========================= */
+/*        Dashboard          */
+/* ========================= */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/* ========================= */
+/*        Modal Popup        */
+/* ========================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* ========================= */
+/*      Loading Screen       */
+/* ========================= */
+.loading-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 24px;
+}
+
+/* ========================= */
+/*        Small Cards        */
+/* ========================= */
+.cards-row-small {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.card-small {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  min-height: 100px;
+}
+
+.card-icon {
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+.card-text h3 {
+  font-size: 16px;
+}
+
+.card-text p {
+  font-size: 12px;
+  color: gray;
+}
+
+/* ========================= */
+/*        Large Cards        */
+/* ========================= */
+.cards-row-large {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.card-large {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Large Card - Top Section */
+.card-large-top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.card-large-icon {
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+/* Large Card - Bottom Section */
+.card-large-bottom {
+  display: flex;
+  margin-top: 10px;
+}
+
+.left-section {
+  width: 33%;
+  background: #f5f5f5;
+  padding: 10px;
+  text-align: center;
+}
+
+.right-section {
+  width: 67%;
+  background: #e9ecef;
+  padding: 10px;
+  text-align: center;
+}
+
+/* ========================= */
+/*      Incident Form        */
+/* ========================= */
+.incident-form {
+  width: 100vw;
+  min-height: 100vh;
+  background: white;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Step Navigation */
+.steps {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Step Container */
+.step-container {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation Buttons */
+.buttons {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .cards-row-small {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cards-row-large {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-row-small {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards-row-large {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-row-small {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .cards-row-large {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

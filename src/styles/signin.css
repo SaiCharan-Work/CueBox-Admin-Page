@@ -1,0 +1,108 @@
+@import '../index.css';
+
+* {
+    font-family: var(--main-font-Inter);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.auth-container {
+    width: 376px;
+    padding: 20px 40px;
+    background-color: #fff;
+    color: black;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.logo {
+    width: 223px;
+    margin-bottom: 15px;
+}
+
+.auth-container h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 40px;
+    margin: 0px 0px 12px;
+}
+
+.welcome-text {
+    margin-bottom: 16px;
+}
+
+.auth-container label {
+    display: block;
+    width: 376px;
+    text-align: left;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    color: black;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.remember-forgot label {
+    text-align: left;
+    width: fit-content;
+    margin: 0px;
+}
+
+.remember-forgot label input {
+    width: fit-content;
+    margin: 0px 5px 0px 0px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.remember-forgot a {
+    font-size: 16px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #03045E;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.or-sign-in {
+    margin-top: 20px;
+}
+
+.google-signin {
+    background-color: #fff;
+    border: 1px solid #EA4335;
+    border-radius: 40px;
+    color: #EA4335;
+    margin-top: 10px;
+}
+
+.register-text {
+    margin-top: 20px;
+}
